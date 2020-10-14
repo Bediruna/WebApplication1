@@ -7,24 +7,6 @@
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-        /*.form-control {
-            background-color: rgba(255, 0, 0, 1);
-        }
-
-        #input1 {
-            color: white;
-        }
-
-            #input1::placeholder {
-                color: white !important;
-            }
-
-        @media (max-width:600px) {
-
-            #input1::placeholder {
-                color: green !important;
-            }
-        }*/
         #formDiv{
             padding:300px;
         }
