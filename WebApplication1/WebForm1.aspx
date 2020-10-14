@@ -7,18 +7,24 @@
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-        #formDiv{
-            padding:300px;
+        #formDiv {
+            padding: 300px;
         }
     </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="formDiv">
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="input1">Text</label>
-                    <input runat="server" id="dropDownInput" placeholder="placholder text" class="form-control" />
+                    <label for="cars">Choose a car:</label>
+                    <select id="cars" name="cars" class="form-control">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
                 </div>
             </div>
 
