@@ -5,38 +5,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        /* .form-control {
-            background-color: rgba(255, 0, 0, 1);
-        }
+    #formDiv {
+        padding: 200px;
+    }
 
-        }*/
-        #cars {
-            color: dodgerblue;
-        }
+    #success {
+        height: 47px;
+        width: 155px;
+        float: right;
+    }
 
-            #cars::placeholder {
-                color: white !important;
-            }
-
-        /*        @media (max-width:600px) {
-            #cars::placeholder {
-                color: green !important;
-            }*/
-
+    @media (max-width:768px) {
         #formDiv {
-            padding: 300px;
+            padding: 50px;
         }
 
         #success {
-            position: fixed;
-            height: 47px;
-            width: 155px;
-            bottom: 18px;
-            right: 18px;
+            width: 100%;
         }
+    }
+
     </style>
     <script>
         $(document).ready(function () {
@@ -57,80 +49,58 @@
     </script>
 </head>
 <body>
-    <%--    <form id="form2" runat="server">
-        <div id="formDiv">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="test">Hi There</label>
-                    <input runat="server" id="Test" placeholder="test" class="form-control" />
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="tester">Hi There</label>
-                    <input runat="server" id="tester" placeholder="test" class="form-control" />
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="tester1">Hi There</label>
-                    <input runat="server" id="tester1" placeholder="test" class="form-control" />
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="tester1">Hi There</label>
-                    <input runat="server" id="tester2" placeholder="test" class="form-control" />
-                </div>
-            </div>
-        </div>--%>
     <form id="form1" runat="server">
         <div id="formDiv">
-            <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="cars">Choose a car:</label>
-                    <select id="cars" name="cars" class="form-control">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="input1">First Name</label>
-                    <input runat="server" id="input1" placeholder="placholder text" class="form-control" />
+            <asp:Panel runat="server" ID="FirstPagePanel">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="cars">Choose a car:</label>
+                        <select runat="server" id="CarsSelect" name="cars" class="form-control">
+                            <option value="">placholder text</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="form-group col-md-6">
-                    <label for="input2">Last Name</label>
-                    <input runat="server" id="input2" placeholder="placholder text" class="form-control" />
-                </div>
-            </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="FirstNameInput">First Name</label>
+                        <input runat="server" id="FirstNameInput" placeholder="placholder text" class="form-control" />
+                    </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-6" id="input3Div">
-                    <label for="input3">Favorite Car</label>
-                    <input runat="server" id="input3" placeholder="placholder text" class="form-control" />
+                    <div class="form-group col-md-6">
+                        <label for="LastNameInput">Last Name</label>
+                        <input runat="server" id="LastNameInput" placeholder="placholder text" class="form-control" />
+                    </div>
                 </div>
 
-                <div class="form-group col-md-6" id="input4Div">
-                    <label for="input4">Number of Seats</label>
-                    <input runat="server" id="input4" placeholder="placholder text" class="form-control" />
+                <div class="form-row">
+                    <div class="form-group col-md-6" id="input3Div">
+                        <label for="FavoriteCarInput">Favorite Car</label>
+                        <input runat="server" id="FavoriteCarInput" placeholder="placholder text" class="form-control" />
+                    </div>
+
+                    <div class="form-group col-md-6" id="input4Div">
+                        <label for="NumberOfSeatsInput">Number of Seats</label>
+                        <select runat="server" id="NumberOfSeatsSelect" class="form-control">
+                            <option value="">placholder text</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
+                <asp:Button CssClass="btn btn-outline-success" ID="Success" runat="server" OnClick="Success_Click" Text="Success" />
+                <asp:Label runat="server" ID="ErrorLabel" Visible="false"/>
+            </asp:Panel>
+            <asp:Panel runat="server" ID="SecondPagePanel" Visible="false">
+                <h1>Success!</h1>
+            </asp:Panel>
         </div>
-        <div>
-            <%--<input type="reset" value="Clear">--%>
-           <%-- <button type="button" class="btn btn-outline-primary" id="primary">Primary</button>--%>
-            <%--<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>--%>
-            <button type="button" class="btn btn-outline-success" id="success">Success</button>
-            <%--<button type="button" class="btn btn-outline-danger" id="danger">Danger</button>--%>
-        </div>
-
-        <div>
-
-        </div>
-
     </form>
 </body>
 </html>
