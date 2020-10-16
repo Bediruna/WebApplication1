@@ -8,8 +8,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
+        /* .form-control {
+            background-color: rgba(255, 0, 0, 1);
+        }
+
+        }*/
+        #cars {
+            color: dodgerblue;
+        }
+
+            #cars::placeholder {
+                color: white !important;
+            }
+
+        /*        @media (max-width:600px) {
+            #cars::placeholder {
+                color: green !important;
+            }*/
+
         #formDiv {
             padding: 300px;
+        }
+
+        #success {
+            position: fixed;
+            height: 47px;
+            width: 155px;
+            bottom: 18px;
+            right: 18px;
         }
     </style>
     <script>
@@ -31,6 +57,30 @@
     </script>
 </head>
 <body>
+    <%--    <form id="form2" runat="server">
+        <div id="formDiv">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="test">Hi There</label>
+                    <input runat="server" id="Test" placeholder="test" class="form-control" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="tester">Hi There</label>
+                    <input runat="server" id="tester" placeholder="test" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="tester1">Hi There</label>
+                    <input runat="server" id="tester1" placeholder="test" class="form-control" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="tester1">Hi There</label>
+                    <input runat="server" id="tester2" placeholder="test" class="form-control" />
+                </div>
+            </div>
+        </div>--%>
     <form id="form1" runat="server">
         <div id="formDiv">
             <div class="form-row">
@@ -69,6 +119,18 @@
                 </div>
             </div>
         </div>
+        <div>
+            <%--<input type="reset" value="Clear">--%>
+           <%-- <button type="button" class="btn btn-outline-primary" id="primary">Primary</button>--%>
+            <%--<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>--%>
+            <button type="button" class="btn btn-outline-success" id="success">Success</button>
+            <%--<button type="button" class="btn btn-outline-danger" id="danger">Danger</button>--%>
+        </div>
+
+        <div>
+
+        </div>
+
     </form>
 </body>
 </html>
