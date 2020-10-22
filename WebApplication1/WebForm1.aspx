@@ -17,10 +17,12 @@
             background-size: cover;
         }
 
-        input:invalid {
+        /*input:invalid {
+            border-color: red;
+        }*/
+        .invalidInput{
             border-color: red;
         }
-
         ::placeholder {
             color: rgba(180,180,180,.5) !important;
         }
@@ -128,6 +130,7 @@
             var forms = $(".needs-validation").get();
             // Loop over them and prevent submission
             var validation = Array.prototype.filter.call(forms, function (form) {
+                
                 form.addEventListener("submit", function (event) {
                     if (form.checkValidity() === false) {
                         event.preventDefault();
@@ -135,6 +138,10 @@
                     }
                     form.classList.add("was-validated");
                 }, false);
+            });
+
+            $(":input[required], select[required]").blur(function () {
+
             });
         });
     </script>
