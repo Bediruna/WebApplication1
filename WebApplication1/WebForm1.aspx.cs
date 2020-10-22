@@ -9,18 +9,17 @@ namespace WebApplication1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Back_Click(object sender, EventArgs e)
         {
 
         }
-
         protected void Success_Click(object sender, EventArgs e)
         {
             string carValue = CarsSelect.Value;
             string firstNameValue = FirstNameInput.Value;
             string lastNameValue = LastNameInput.Value;
             string favoriteCarValue = FavoriteCarInput.Value;
-            string numberOfSeatsValue = NumberOfSeatsSelect.Value;
+            string numberOfSeatsValue = NumberOfSeatsInput.Value;
 
             bool isFirstPageValid = ValidateFirstPage(carValue, firstNameValue, lastNameValue, favoriteCarValue, numberOfSeatsValue);
 

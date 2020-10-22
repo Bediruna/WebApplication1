@@ -51,6 +51,15 @@ namespace WebApplication1
         protected global::System.Web.UI.HtmlControls.HtmlInputText FirstNameInput;
 
         /// <summary>
+        /// MiddleNameInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText MiddleNameInput;
+
+        /// <summary>
         /// LastNameInput control.
         /// </summary>
         /// <remarks>
@@ -69,13 +78,22 @@ namespace WebApplication1
         protected global::System.Web.UI.HtmlControls.HtmlInputText FavoriteCarInput;
 
         /// <summary>
-        /// NumberOfSeatsSelect control.
+        /// NumberOfSeatsInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect NumberOfSeatsSelect;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect NumberOfSeatsInput;
+
+        /// <summary>
+        /// Back control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Back;
 
         /// <summary>
         /// Success control.
