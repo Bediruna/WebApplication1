@@ -141,7 +141,15 @@
             });
 
             $(":input[required], select[required]").blur(function () {
+                if (selectJQ.val() === "volvo" | selectJQ.val() === "saab" | selectJQ.val() === "fiat" | selectJQ.val() === "audi") {
+                    $("#CarsSelect").removeClass("is-invalid");
+                    $("#CarsSelect").addClass("is-valid");
 
+                }
+                else {
+                    $("#CarsSelect").addClass("is-invalid");
+                    ("#CarsSelect").removeClass("is-valid");
+                }
             });
         });
     </script>
